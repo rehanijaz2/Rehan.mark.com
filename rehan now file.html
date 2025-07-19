@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rehanmark.com - Digital Marketing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #0a66c2, #004080);
+      padding: 40px 20px;
+      color: white;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .services, .languages {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .box {
+      background: white;
+      padding: 30px;
+      margin: 15px;
+      border-radius: 15px;
+      flex: 1 1 280px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    .box i {
+      font-size: 40px;
+      margin-bottom: 15px;
+      color: #0a66c2;
+    }
+    footer {
+      background: #002244;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      font-size: 16px;
+      z-index: 1000;
+    }
+    .whatsapp-btn:hover {
+      background: #1eb851;
+    }
+    select.language-select {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="heading-title">Welcome to <strong>Rehanmark.com</strong></h1>
+    <p id="heading-sub">Your Trusted Digital Marketing Partner</p>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#languages">Language</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="services">
+    <h2 id="services-title">🌟 Our Services</h2>
+    <div class="services">
+      <div class="box">
+        <i class="fab fa-instagram"></i>
+        <h3 id="insta-title">Instagram Marketing</h3>
+        <p id="insta-desc">We promote your brand and products to the right audience on Instagram using attractive content and strategic ads. <strong>Get 20% off today!</strong></p>
+      </div>
+      <div class="box">
+        <i class="fab fa-facebook"></i>
+        <h3 id="fb-title">Facebook Promotions</h3>
+        <p id="fb-desc">Boost your sales with custom-made Facebook campaigns targeting your ideal customers. <strong>Limited-time 20% discount!</strong></p>
+      </div>
+      <div class="box">
+        <i class="fab fa-tiktok"></i>
+        <h3 id="tiktok-title">TikTok Campaigns</h3>
+        <p id="tiktok-desc">Make your videos go viral with powerful TikTok strategies tailored to your niche. <strong>20% discount available now!</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 id="about-title">👥 About Rehanmark</h2>
+    <p id="about-desc" style="font-size: 18px; line-height: 1.6;">
+      Rehanmark.com is a results-driven digital marketing agency helping businesses thrive in the social media space.
+      We specialize in Instagram, Facebook, and TikTok promotions. With innovative strategies and a passion for growth,
+      we transform social presence into real business results. Whether you’re just starting or scaling up — we’re here to elevate your brand.
+    </p>
+  </section>
+
+  <section id="languages">
+    <h2>🌐 Select Your Language</h2>
+    <p>Choose your preferred language for viewing this website:</p>
+    <select class="language-select" onchange="changeLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="ur">Urdu</option>
+    </select>
+  </section>
+
+  <section id="contact">
+    <h2 id="contact-title">📞 Contact Us</h2>
+    <p><strong id="phone-label">Phone:</strong> +92 319 9346640</p>
+    <p><strong id="email-label">Email:</strong> <a href="mailto:ijazrehanijaz200@gmail.com">ijazrehanijaz200@gmail.com</a></p>
+    <p><strong id="whatsapp-label">WhatsApp:</strong> +92 319 9346640</p>
+  </section>
+
+  <a class="whatsapp-btn" href="https://wa.me/923199346640" target="_blank">
+    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+  </a>
+
+  <footer>
+    <p>&copy; 2025 Rehanmark.com | Powered by your growth. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function changeLanguage(lang) {
+      if (lang === 'ur') {
+        document.getElementById("heading-title").innerHTML = "<strong>Rehanmark.com</strong> mein khush aamdeed";
+        document.getElementById("heading-sub").innerText = "Aap ka bharosemand digital marketing partner";
+        document.getElementById("services-title").innerText = "🌟 Hamari Services";
+        document.getElementById("insta-title").innerText = "Instagram Marketing";
+        document.getElementById("insta-desc").innerText = "Hum aap ke brand ko Instagram par promote karte hain creative content aur ads ke zariye. 20% discount hasil karain!";
+        document.getElementById("fb-title").innerText = "Facebook Promotions";
+        document.getElementById("fb-desc").innerText = "Facebook ads ke zariye customers tak pohchain aur sales barhain. Abhi 20% discount lein!";
+        document.getElementById("tiktok-title").innerText = "TikTok Campaigns";
+        document.getElementById("tiktok-desc").innerText = "Viral TikTok videos ke liye hamari services ka faida uthayein. 20% off sirf ab ke liye!";
+        document.getElementById("about-title").innerText = "👥 Rehanmark ke baare mein";
+        document.getElementById("about-desc").innerText = "Rehanmark.com aik digital marketing agency hai jo businesses ko social media par grow karne mein madad karti hai. Hamari services Instagram, Facebook, aur TikTok ke liye specially banai gayi hain.";
+        document.getElementById("contact-title").innerText = "📞 Rabta karen";
+        document.getElementById("phone-label").innerText = "Phone:";
+        document.getElementById("email-label").innerText = "Email:";
+        document.getElementById("whatsapp-label").innerText = "WhatsApp:";
+      } else {
+        location.reload();
+      }
+    }
+  </script>
+</body>
+</html>
